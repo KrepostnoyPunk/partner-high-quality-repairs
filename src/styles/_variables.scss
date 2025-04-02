@@ -1,0 +1,28 @@
+@use 'tools' as *;
+
+:root{
+    // цвета
+    --dark-color: ;
+
+    --accent-color: ;
+
+    --light-color: ;
+
+    // шрифты
+    --font-base: ;
+    --font-accent: ;
+
+    // gradiens
+    --btn-gradient: linear-gradient(90deg, #009bfb 0%, #1d3fa0 100%);
+
+    // размеры контейнера
+    --container-width: #{rem(1640)};
+    --container-padding-x: #{rem(20)}; // берется из мобилки, по значению отступов от контейнера
+
+    // длительность переходов
+    --transition-duration: 0.3s;
+
+    @include laptop{
+        --container-width: #{rem(1360)};
+    }
+}

@@ -1,0 +1,38 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# Environment variables
+.env
+
+# SCSS files
+# src/styles/blocks.scss
+# src/styles/tools.scss
+# src/styles/variables.scss
+# src/styles/fonts.scss
+# src/styles/globals.scss
+# src/styles/utils.scss
+# src/styles/normalize.scss
+# src/styles/main.scss
