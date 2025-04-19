@@ -1,0 +1,43 @@
+@use '../tools' as *;
+
+.dropdown{
+    position: relative;
+
+    @include hover{
+        .dropdown__list{
+            @include show;
+        }
+    }
+
+    &__btn{
+        display: flex;
+        align-items: center;
+        column-gap: rem(9.5);
+        position: relative;
+
+        @include hover{
+            &::after{
+                rotate: 180deg;
+            }
+        }
+
+        &::after{
+            content: url('/public/icons/dropdown-arrow.svg');
+            transition-duration: var(--transition-duration);
+        }
+    }
+
+    &__list{
+        @include hide;
+
+        z-index: 101;
+        position: absolute;
+        backdrop-filter: blur(rem(5));
+        background: rgba(24, 24, 24, 0.4);
+        width: auto;
+        padding: rem(10) rem(30);
+        border-radius: rem(10);
+        min-width: rem(150);
+        transition-duration: var(--transition-duration);
+    }
+}

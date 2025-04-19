@@ -11,105 +11,113 @@
   <body>
     <!-- header -->
      <header class="header">
-      <div class="header__inner">
-        <div class="header__logo logo">
-          <img src="" alt="" class="logo__img">
+      <div class="header__inner container">
+        <a href="/" class="header__logo logo">
+          <img src="/public/icons/logo--header.png" alt="" class="logo__img" width="80" height="64">
+        </a>
+        <div class="header__mobile-overlay" data-js-header-overlay>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item dropdown">
+                <a href="#" class="header__menu-link dropdown__btn">
+                  О компании
+                </a>
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link">
+                      Lorem, ipsum.
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link">
+                      Lorem, ipsum.
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link">
+                      Lorem, ipsum.
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__menu-item dropdown">
+                <a href="#" class="header__menu-link dropdown__btn">
+                  Услуги
+                </a>
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link">
+                      Lorem, ipsum.
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link">
+                      Lorem, ipsum.
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link">
+                      Lorem, ipsum.
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">
+                  Каталог проектов
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">
+                  Сотрудничество
+                </a>
+              </li>
+              <li class="header__menu-item dropdown">
+                <a href="#" class="header__menu-link dropdown__btn">
+                  Работа с госпрограммами
+                </a>
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link">
+                      Lorem, ipsum.
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link">
+                      Lorem, ipsum.
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="dropdown__link">
+                      Lorem, ipsum.
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">
+                  Акции
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">
+                  Цены
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="header__menu">
-          <ul class="header__menu-list">
-            <li class="header__menu-item dropdown">
-              <a href="#" class="header__menu-link dropdown__btn">
-                О компании
-              </a>
-              <ul class="dropdown__list">
-                <li class="dropdown__item">
-                  <a href="#" class="dropdown__link">
-                    1
-                  </a>
-                </li>
-                <li class="dropdown__item">
-                  <a href="#" class="dropdown__link">
-                    2
-                  </a>
-                </li>
-                <li class="dropdown__item">
-                  <a href="#" class="dropdown__link">
-                    3
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__menu-item dropdown">
-              <a href="#" class="header__menu-link dropdown__btn">
-                Услуги
-              </a>
-              <ul class="dropdown__list">
-                <li class="dropdown__item">
-                  <a href="#" class="dropdown__link">
-                    1
-                  </a>
-                </li>
-                <li class="dropdown__item">
-                  <a href="#" class="dropdown__link">
-                    2
-                  </a>
-                </li>
-                <li class="dropdown__item">
-                  <a href="#" class="dropdown__link">
-                    3
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu-link">
-                Каталог проектов
-              </a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu-link">
-                Сотрудничество
-              </a>
-            </li>
-            <li class="header__menu-item dropdown">
-              <a href="#" class="header__menu-link dropdown__btn">
-                Работа с госпрограммами
-              </a>
-              <ul class="dropdown__list">
-                <li class="dropdown__item">
-                  <a href="#" class="dropdown__link">
-                    1
-                  </a>
-                </li>
-                <li class="dropdown__item">
-                  <a href="#" class="dropdown__link">
-                    2
-                  </a>
-                </li>
-                <li class="dropdown__item">
-                  <a href="#" class="dropdown__link">
-                    3
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu-link">
-                Акции
-              </a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu-link">
-                Цены
-              </a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#" class="header__menu-link">
-                Контакты
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <button type="button" class="header__burger-btn burger-btn visible-tablet-s" aria-label="Open navigation menu" title="Open navigation menu" data-js-burger-btn>
+          <span class="burger-btn__line"></span>
+          <span class="burger-btn__line burger-btn__line--short"></span>
+          <span class="burger-btn__line"></span>
+          <span class="burger-btn__line burger-btn__line--short"></span>
+        </button>
       </div>
      </header>
      <!-- main -->
@@ -237,11 +245,11 @@
         </section>
         <!-- house-assortment -->
         <section class="section">
-          <div class="section__header">
+          <header class="section__header">
             <h2 class="section__header-title h3">
               Типы домов
             </h2>
-          </div>
+          </header>
           <div class="section__body">
             <div class="house-assortment">
               <ul class="house-assortment__list">
@@ -373,11 +381,11 @@
         </section>
         <!-- guarantees -->
          <section class="section">
-          <div class="section__header">
+          <header class="section__header">
             <h2 class="section__header-title h3">
               Договор с мощными гарантиями
             </h2>
-          </div>
+          </header>
           <div class="section__body">
             <div class="guarantees">
               <div class="guarantees__top">
@@ -434,11 +442,11 @@
          </section>
          <!-- presentation -->
           <section class="section">
-            <div class="section__header">
+            <header class="section__header">
               <h2 class="section__header-title h3">
                 Так может выглядеть ваш будущий дом
               </h2>
-            </div>
+            </header>
             <div class="section__body">
               <div class="glide">
                 <div class="glide__track" data-glide-el="track">
@@ -463,11 +471,11 @@
           </section>
           <!-- cost-calculator -->
           <section class="section">
-            <div class="section__header">
+            <header class="section__header">
               <h2 class="section__header-title h3">
                 Калькулятор стоимости работ
               </h2>
-            </div>
+            </header>
             <div class="section__body">
               <div class="cost-calculator">
                 <form class="cost-calculator__form">
@@ -865,7 +873,7 @@
                           </div>
                           <div class="tarrifs-card__price">
                             <p class="tarrifs-card__cost">
-                              90 000
+                              105 000
                             </p>
                             <span class="tarrifs-card__measure">
                               руб/м²
@@ -1042,47 +1050,47 @@
                           </li>
                           <li class="tarrifs-card__item">
                             <p class="tarrifs-card__point">
-                              Окна, профиль 70мм
+                              <s>Окна, профиль 70мм</s>
                             </p>
                           </li>
                           <li class="tarrifs-card__item">
                             <p class="tarrifs-card__point">
-                              Отопление, теплый пол
+                              <s>Отопление, теплый пол</s>
                             </p>
                           </li>
                           <li class="tarrifs-card__item">
                             <p class="tarrifs-card__point">
-                              Разводка водопровода и канализации к сантех приборам
+                              <s>Разводка водопровода и канализации к сантех приборам</s>
                             </p>
                           </li>
                           <li class="tarrifs-card__item">
                             <p class="tarrifs-card__point">
-                              Стяжка пола
+                              <s>Стяжка пола</s>
                             </p>
                           </li>
                           <li class="tarrifs-card__item">
                             <p class="tarrifs-card__point">
-                              Штукатурка стен, шпаклевка под обои
+                              <s>Штукатурка стен, шпаклевка под обои</s>
                             </p>
                           </li>
                           <li class="tarrifs-card__item">
                             <p class="tarrifs-card__point">
-                              Электромонтажные работы
+                              <s>Электромонтажные работы</s>
                             </p>
                           </li>
                           <li class="tarrifs-card__item">
                             <p class="tarrifs-card__point">
-                              Котельная под ключ
+                              <s>Котельная под ключ</s>
                             </p>
                           </li>
                           <li class="tarrifs-card__item">
                             <p class="tarrifs-card__point">
-                              Выгребная яма
+                              <s>Выгребная яма</s>
                             </p>
                           </li>
                           <li class="tarrifs-card__item">
                             <p class="tarrifs-card__point">
-                              Отмостка
+                              <s>Отмостка</s>
                             </p>
                           </li>
                         </ul>
@@ -1096,6 +1104,170 @@
               </div>
             </div>
           </section>
+          <!-- contact-form -->
+          <section class="section section--bg-full">
+            <div class="section__body">
+              <div class="contact-form">
+                <img src="" alt="" class="contact-form__img">
+                <form class="contact-form__form">
+                  <header class="contact-form__header">
+                    <h3 class="contact-form__title">
+                      Оставьте заявку — мы свяжемся с вами в кратчайшие сроки
+                    </h3>
+                    <p class="contact-form__info">
+                      Эксперты по строительству домов ответят на ваши вопросы
+                    </p>
+                  </header>
+                  <div class="contact-form__inputs-group">
+                    <div class="contact-form__fields-container">
+                      <div class="contact-form__cell field">
+                        <label for="name" class="field__label visually-hidden">Ваше имя</label>
+                        <input type="text" class="filed__input" id="name" placeholder="Ваше имя" required>
+                      </div>
+                      <div class="contact-form__cell field">
+                        <label for="phoneNumber" class="field__label visually-hidden">Номер телефона</label>
+                        <input type="tel" class="filed__input" id="phoneNumber" required>
+                      </div>
+                    </div>
+                    <div class="contact-form__agreement">
+                      <label class="checbox">
+                        <input type="checkbox" class="checkbox__input">
+                        <span class="checbox__label">
+                          Я согласен(на) на обработку моих персональных данных в соответствии с <a href="/">условиями</a>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="contact-form__action-btn btn">
+                    <span class="icon icon--circle-after">
+                      Оставить заявку
+                    </span>
+                  </button>
+                </form>
+                <img src="" alt="" class="contact-form__img">
+              </div>
+            </div>
+          </section>
+          <!-- map and metrics -->
+          <section class="section">
+            <div class="yandex-vidgets">
+              <div class="yandex-vidgets__map" style="position:relative;overflow:hidden;">
+                <a href="https://yandex.ru/maps/org/partner/101183361416/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">
+                  Партнер
+                </a>
+                <a href="https://yandex.ru/maps/240/togliatti/category/construction_company/184107633/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">
+                  Строительная компания в Тольятти
+                </a>
+                <a href="https://yandex.ru/maps/240/togliatti/category/construction_and_finishing_works/184107547/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">
+                  Строительные и отделочные работы в Тольятти
+                </a>
+                <iframe src="https://yandex.ru/map-widget/v1/org/partner/101183361416/?ll=49.429008%2C53.503997&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+              </div>
+              <div class="yandex-vidgets__metric" style="width:560px;height:800px;overflow:hidden;position:relative;">
+                <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/101183361416?comments"></iframe>
+                <a href="https://yandex.ru/maps/org/partner/101183361416/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">
+                  Партнер на карте Тольятти — Яндекс Карты
+                </a>
+              </div>
+            </div>
+          </section>
+          <!-- faq -->
+           <section class="section">
+            <header class="section__header">
+              <h2 class="section__header-title h3">
+                Часто задаваемые вопросы
+              </h2>
+            </header>
+            <div class="section__body">
+              <div class="accordion-group">
+                <div class="accordion cell">
+                    <details class="accordion__details" name="faq" open>
+                        <summary class="accordion__summary">
+                            <h4 class="accordion__title h6">
+                                <span role="term" aria-details="faq-1">
+                                  У меня уже есть проект, купленный у другой компании. Вы можете рассчитать стоимость строительства под ключ?
+                                </span>
+                            </h4>
+                        </summary>
+                    </details>
+                    <div class="accordion__content" id="faq-1" role="definition">
+                        <div class="accordion__content-inner">
+                            <div class="accordion__content-body">
+                                <p>
+                                  Конечно, можем.  Для того, чтобы рассчитать стоимость строительства вашего проекта «под ключ», нам потребуется более подробная информация. Пожалуйста, предоставьте нам:
+                                  проектную документацию, местоположение объекта, требуемые материалы и отделка, срок выполнения работ, желаемые сроки строительства влияют на стоимость и организацию работ.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion cell">
+                  <details class="accordion__details" name="faq" open>
+                      <summary class="accordion__summary">
+                          <h4 class="accordion__title h6">
+                              <span role="term" aria-details="faq-2">
+                                У меня уже есть проект, купленный у другой компании. Вы можете рассчитать стоимость строительства под ключ?
+                              </span>
+                          </h4>
+                      </summary>
+                  </details>
+                  <div class="accordion__content" id="faq-2" role="definition">
+                      <div class="accordion__content-inner">
+                          <div class="accordion__content-body">
+                              <p>
+                                Конечно, можем.  Для того, чтобы рассчитать стоимость строительства вашего проекта «под ключ», нам потребуется более подробная информация. Пожалуйста, предоставьте нам:
+                                проектную документацию, местоположение объекта, требуемые материалы и отделка, срок выполнения работ, желаемые сроки строительства влияют на стоимость и организацию работ.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="accordion cell">
+                  <details class="accordion__details" name="faq" open>
+                      <summary class="accordion__summary">
+                          <h4 class="accordion__title h6">
+                              <span role="term" aria-details="faq-3">
+                                У меня уже есть проект, купленный у другой компании. Вы можете рассчитать стоимость строительства под ключ?
+                              </span>
+                          </h4>
+                      </summary>
+                  </details>
+                  <div class="accordion__content" id="faq-3" role="definition">
+                      <div class="accordion__content-inner">
+                          <div class="accordion__content-body">
+                              <p>
+                                Конечно, можем.  Для того, чтобы рассчитать стоимость строительства вашего проекта «под ключ», нам потребуется более подробная информация. Пожалуйста, предоставьте нам:
+                                проектную документацию, местоположение объекта, требуемые материалы и отделка, срок выполнения работ, желаемые сроки строительства влияют на стоимость и организацию работ.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="accordion cell">
+                  <details class="accordion__details" name="faq" open>
+                      <summary class="accordion__summary">
+                          <h4 class="accordion__title h6">
+                              <span role="term" aria-details="faq-4">
+                                У меня уже есть проект, купленный у другой компании. Вы можете рассчитать стоимость строительства под ключ?
+                              </span>
+                          </h4>
+                      </summary>
+                  </details>
+                  <div class="accordion__content" id="faq-4" role="definition">
+                      <div class="accordion__content-inner">
+                          <div class="accordion__content-body">
+                              <p>
+                                Конечно, можем.  Для того, чтобы рассчитать стоимость строительства вашего проекта «под ключ», нам потребуется более подробная информация. Пожалуйста, предоставьте нам:
+                                проектную документацию, местоположение объекта, требуемые материалы и отделка, срок выполнения работ, желаемые сроки строительства влияют на стоимость и организацию работ.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           </section>
       </main>
+      <!-- footer -->
   </body>
 </html>

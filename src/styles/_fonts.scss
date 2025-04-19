@@ -1,7 +1,15 @@
 @font-face {
-    font-family: 'FN';
-    src: url('/assets/fonts/FN-Regular.woff2') format('woff2');
-    font-weight: 400;
+    font-family: 'Muller Light';
+    src: url('/public/fonts/MullerNarrowDemo-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller Bold';
+    src: url('/public/fonts/MullerNarrowDemo-ExtraBold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }

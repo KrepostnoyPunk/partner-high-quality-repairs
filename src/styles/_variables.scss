@@ -2,17 +2,17 @@
 
 :root{
     // цвета
-    --dark-color: ;
+    --dark-color: #34343F;
 
-    --accent-color: ;
+    --accent-color: #1B223C;
 
-    --light-color: ;
+    --light-color: #fff;
 
     // шрифты
-    --font-base: ;
-    --font-accent: ;
+    --font-base: "Muller Light", arial;
+    --font-accent: "Muller Bold", arial;
 
-    // gradiens
+    // gradients
     --btn-gradient: linear-gradient(90deg, #009bfb 0%, #1d3fa0 100%);
 
     // размеры контейнера
@@ -23,6 +23,6 @@
     --transition-duration: 0.3s;
 
     @include laptop{
-        --container-width: #{rem(1360)};
+        --container-width: #{rem(1340)};
     }
 }

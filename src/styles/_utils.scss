@@ -25,3 +25,9 @@
         display: none !important;
     }
 }
+
+.visible-tablet-s{
+    @include tablet-s-above{
+        display: none !important;
+    }
+}
