@@ -1,6 +1,104 @@
 @use '../tools' as *;
 
 .hero{
-    // background: url('/public/images/header-bg.jpg');
-    // height: 100vh;
+    --bgImg: url('/public/images/header-bg.jpg');
+
+    background: var(--bgImg)  center / cover no-repeat;
+    height: 100vh;
+    color: var(--light-color);
+    position: relative;
+
+    &__top{
+        display: grid;
+        padding-top: fluid(270, 130);
+        row-gap: rem(54);
+    }
+
+    &__info{
+        display: grid;
+        row-gap: rem(40);
+
+        @include tablet{
+            text-align: center;
+            justify-items: center;
+        }
+    }
+
+    &__title{
+        color: inherit;
+    }
+
+    &__contacts{
+        display: grid;
+        row-gap: rem(21);
+    }
+
+    &__phone{
+        display: inline-flex;
+        align-items: center;
+        column-gap: rem(20);
+        font-size: fluid(36, 24);
+
+        &::before{
+            --size: #{rem(48)};
+
+            @include square(--size);
+
+            content: url('/public/icons/phone.svg');
+        }
+    }
+
+    &__actions{
+        display: flex;
+        align-items: center;
+        column-gap: rem(20);
+
+        @include tablet{
+            flex-direction: column;
+            row-gap: rem(16);
+        }
+    }
+
+    &__services{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        display: grid;
+        backdrop-filter: blur(5px);
+        background: rgba(24, 24, 24, 0.4);
+        border-top: var(--border-light);
+
+        @include tablet-above{
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        &-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: rem(34);
+            padding: fluid(41, 10);
+
+            &:not(:last-child){
+                border-right: var(--border-light);
+            }
+        }
+
+        &-decoration{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: rem(20);
+
+            svg{
+                @include square(#{fluid(42, 35)})
+            }
+
+            &-line{
+                width: fluid(34, 17);
+                height: rem(2);
+                background-color: var(--light-color);
+            }
+        }
+    }
 }

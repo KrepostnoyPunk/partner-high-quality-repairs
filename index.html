@@ -10,7 +10,7 @@
   </head>
   <body>
     <!-- header -->
-     <header class="header">
+     <header class="header" data-js-header>
       <div class="header__inner container">
         <a href="/" class="header__logo logo">
           <img src="/public/icons/logo--header.png" alt="" class="logo__img" width="80" height="64">
@@ -112,11 +112,10 @@
             </ul>
           </nav>
         </div>
-        <button type="button" class="header__burger-btn burger-btn visible-tablet-s" aria-label="Open navigation menu" title="Open navigation menu" data-js-burger-btn>
+        <button type="button" class="header__burger-btn burger-btn visible-tablet" aria-label="Open navigation menu" title="Open navigation menu" data-js-burger-btn>
           <span class="burger-btn__line"></span>
           <span class="burger-btn__line burger-btn__line--short"></span>
           <span class="burger-btn__line"></span>
-          <span class="burger-btn__line burger-btn__line--short"></span>
         </button>
       </div>
      </header>
@@ -126,13 +125,16 @@
         <section class="section">
           <div class="section__body">
             <div class="hero">
-              <div class="hero__top">
+              <div class="hero__top container">
                 <div class="hero__info">
                   <h1 class="hero__title">
-                    г. Тольятти,
+                    г. Тольятти, <br>
                     ул. Баныкина 32А, 2-этаж
                   </h1>
                   <div class="hero__contacts">
+                    <h2 class="visually-hidden">
+                      Contacts
+                    </h2>
                     <a href="tel:+78482610511" class="hero__phone">
                       +7 (8482) 61-05-11
                     </a>
@@ -153,6 +155,9 @@
                 </div>
               </div>
               <div class="hero__bottom">
+                <h2 class="visually-hidden">
+                  Our services
+                </h2>
                 <ul class="hero__services">
                   <li class="hero__services-item">
                     <div class="hero__services-decoration">

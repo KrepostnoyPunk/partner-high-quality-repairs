@@ -9,11 +9,14 @@
     --light-color: #fff;
 
     // шрифты
-    --font-base: "Muller Light", arial;
+    --font-base: "Muller Regular", arial;
     --font-accent: "Muller Bold", arial;
 
     // gradients
     --btn-gradient: linear-gradient(90deg, #009bfb 0%, #1d3fa0 100%);
+
+    // borders
+    --border-light: #{rem(1)} solid var(--light-color);
 
     // размеры контейнера
     --container-width: #{rem(1640)};

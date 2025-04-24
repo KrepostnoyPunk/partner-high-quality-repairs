@@ -1,17 +1,14 @@
 @use '../tools' as *;
 
 .header{
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 100;
-    animation-name: header-scroll;
-    animation-fill-mode: both;
-    animation-timeline: scroll();
-    animation-range: rem(30) rem(200);
     backdrop-filter: blur(rem(5));
     background: rgba(24, 24, 24, 0.4);
     color: var(--light-color);
-    border-bottom: rem(1) solid var(--light-color);
+    border-bottom: var(--border-light);
+    width: 100%;
 
     &__inner{
         display: flex;
@@ -22,25 +19,25 @@
     }
 
     &__mobile-overlay{
-        @include mobile-above{
-            display: contents; // как бы отключает обертку на экранах выше разрешения мобилки что позволяет правильно располодить элементы
+        @include tablet-above{
+            display: contents;
         }
 
-        @include tablet-s{
+        @include tablet{
             position: fixed;
             inset: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background-color: var(--dark-color-19);
+            align-items: center;
+            background-color: var(--accent-color);
             padding: 1rem;
             row-gap: 3rem;
             transition-duration: var(--transition-duration);
+            height:100vh;
 
             &:not(.is-active){
                 @include hide;
-
-                translate: 100%;
             }
         }
     }
@@ -50,10 +47,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
+            white-space: nowrap;
             column-gap: rem(32);
 
             @include tablet{
-                column-gap: rem(16);
+                flex-direction: column;
+                row-gap: 1rem;
             }
         }
     }

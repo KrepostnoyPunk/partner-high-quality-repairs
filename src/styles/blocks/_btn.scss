@@ -1,0 +1,19 @@
+@use '../tools' as *;
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(18) rem(32);
+    background: var(--btn-gradient);
+    border-radius: rem(57);
+    min-width: rem(223);
+    font-weight: 500;
+    font-family: 'Muller Medium', sans-serif;
+    color: var(--light-color);
+
+    &--transparent{
+        background: transparent;
+        border: var(--border-light);
+    }
+}
