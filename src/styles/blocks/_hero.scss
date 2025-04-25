@@ -8,6 +8,10 @@
     color: var(--light-color);
     position: relative;
 
+    @include mobile{
+        height: 85vh;
+    }
+
     &__top{
         display: grid;
         padding-top: fluid(270, 130);
@@ -74,13 +78,16 @@
 
         &-item{
             display: flex;
-            justify-content: center;
             align-items: center;
             column-gap: rem(34);
             padding: fluid(41, 10);
 
             &:not(:last-child){
                 border-right: var(--border-light);
+            }
+
+            @include tablet-above{
+                justify-content: center;
             }
         }
 
