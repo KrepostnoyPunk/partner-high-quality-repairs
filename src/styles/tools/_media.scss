@@ -1,10 +1,11 @@
 @use 'functions' as *;
 
-$laptop: 1440.98; // .98 позволяет избегать бага определения viewport на некоторых устройствах
+$laptop: 1439.98; // .98 позволяет избегать бага определения viewport на некоторых устройствах
+$laptop-s: 1149.98;
 $tablet: 1023.98;
 $tablet-s: 889.98;
 $mobile: 767.98;
-$mobile-s: 480.98;
+$mobile-s: 489.98;
 
 // миксины позволяющие вписывать медиа запросы непосредственно в селектор тем самым уменьшая объем и путаницу медиа запросов
 @mixin laptop-above{
@@ -15,6 +16,18 @@ $mobile-s: 480.98;
 
 @mixin laptop{
     @media (width <= rem($laptop)) { // благодаря функции перевода px в rem, медиа заросы будут ориентироваться на более гибкие единицы измереня - rem
+        @content;
+    }
+}
+
+@mixin laptop-s-above{
+    @media (width > rem($laptop-s)) { 
+        @content;
+    }
+}
+
+@mixin laptop-s{
+    @media (width <= rem($laptop-s)) {
         @content;
     }
 }

@@ -1,0 +1,32 @@
+@use '../tools' as *;
+
+.glide{
+    display: grid;
+    row-gap: rem(32);
+
+    &__arrows{
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: rem(40);
+
+        &--wide{
+            justify-self: normal
+        }
+    }
+
+    &__arrow{
+        @include reset-btn;
+
+        @include square(#{rem(68)});
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        @include hover{
+            opacity: .55;
+        }
+    }
+}

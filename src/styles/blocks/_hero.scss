@@ -3,7 +3,7 @@
 .hero{
     --bgImg: url('/public/images/header-bg.jpg');
 
-    background: var(--bgImg)  center / cover no-repeat;
+    background: linear-gradient(180deg, rgba(5, 5, 5, 0.4)), var(--bgImg)  center / cover no-repeat;
     height: 100vh;
     color: var(--light-color);
     position: relative;

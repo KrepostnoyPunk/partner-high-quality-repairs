@@ -1,5 +1,5 @@
 {
-  "name": "vite-template--vanilla-js",
+  "name": "partner-hq-repairs",
   "private": false,
   "vite-template": true,
   "version": "1.0.0",
@@ -12,5 +12,8 @@
   "devDependencies": {
     "sass": "^1.86.0",
     "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.7.1"
   }
 }
