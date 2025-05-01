@@ -25,6 +25,9 @@
     // длительность переходов
     --transition-duration: 0.3s;
 
+    // длительность анимаций
+    --animaation-duration: 1.3s;
+
     @include laptop{
         --container-width: #{rem(1340)};
     }

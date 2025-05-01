@@ -4,6 +4,12 @@
     display: grid;
     row-gap: fluid(80, 40);
     
+    &__body{
+        &--bg-full{
+            background: url('/public/images/where-to-start.jpg') center / cover no-repeat;
+        }
+    }
+
     &:not(:first-child){
         padding-top: fluid(120, 60);
     }

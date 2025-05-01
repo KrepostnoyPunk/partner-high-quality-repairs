@@ -1,0 +1,65 @@
+@use '../tools' as *;
+
+.where-to-start{
+    padding-block: rem(45);
+
+    &__container{
+        padding: rem(47) rem(60);
+        backdrop-filter: blur(rem(49));
+        box-shadow: 0 0 rem(36) 0 rgba(20, 21, 21, 0.5);
+        background: rgba(255, 255, 255, 0.01);
+        border-radius: rem(11);
+
+        @include mobile{
+            padding: rem(20);
+        }
+    }
+
+    &__inner{
+        display: grid;
+        column-gap: rem(59);
+        align-items: center;
+        background:
+            linear-gradient(to right, var(--light-color) rem(20), transparent rem(20)) 0 0,
+            linear-gradient(to right, var(--light-color) rem(20), transparent rem(20)) 0 100%,
+            linear-gradient(to left, var(--light-color) rem(20), transparent rem(20)) 100% 0,
+            linear-gradient(to left, var(--light-color) rem(20), transparent rem(20)) 100% 100%,
+            linear-gradient(to bottom, var(--light-color) rem(20), transparent rem(20)) 0 0,
+            linear-gradient(to bottom, var(--light-color) rem(20), transparent rem(20)) 100% 0,
+            linear-gradient(to top, var(--light-color) rem(20), transparent rem(20)) 0 100%,
+            linear-gradient(to top, var(--light-color) rem(20), transparent rem(20)) 100% 100%;
+        background-repeat: no-repeat;
+        background-size: rem(20) rem(2), rem(20) rem(2), rem(20) rem(2), rem(20) rem(2), rem(2) rem(20), rem(2) rem(20), rem(2) rem(20), rem(2) rem(20);
+
+        @include tablet{
+            column-gap: rem(20);
+        }
+
+        @include mobile-above{
+            grid-template-columns: 68% auto;
+        }
+
+        @include mobile{
+            text-align: center;
+            justify-items: center;
+            padding: rem(21) rem(23);
+        }
+    }
+
+    &__agitation{
+        display: grid;
+        row-gap: rem(20);
+        padding: rem(31) rem(34);
+    }
+
+    &__title{
+        color: var(--light-color);
+        font-size: fluid(80, 44);
+    }
+
+    &__call-to-action{
+        color: var(--light-color);
+        text-decoration: underline !important;
+        font-size: fluid(48, 24);
+    }
+}

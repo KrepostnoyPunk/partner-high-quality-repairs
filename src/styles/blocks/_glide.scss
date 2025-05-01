@@ -3,6 +3,22 @@
 .glide{
     display: grid;
     row-gap: rem(32);
+    
+    @include mobile{
+        position: relative;
+        width: 100%;
+        max-width: rem(800);
+    }
+
+    &__track{
+        overflow: hidden;
+    }
+
+    &__slides{
+        @include mobile{
+            position: relative;
+        }
+    }
 
     &__arrows{
         justify-self: center;

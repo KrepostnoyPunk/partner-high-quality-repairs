@@ -14,6 +14,7 @@ class Header{
         this.rootEl = document.querySelector(this.selectors.root);
         this.overlayEl = this.rootEl.querySelector(this.selectors.overlay);
         this.burgerBtnEl = this.rootEl.querySelector(this.selectors.burgerBtn)
+        
         this.bindEvents()
     }
 

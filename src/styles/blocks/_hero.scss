@@ -1,16 +1,12 @@
 @use '../tools' as *;
 
 .hero{
-    --bgImg: url('/public/images/header-bg.jpg');
+    --bgImg: url('/public/images/hero-bg.jpg');
 
     background: linear-gradient(180deg, rgba(5, 5, 5, 0.4)), var(--bgImg)  center / cover no-repeat;
     height: 100vh;
     color: var(--light-color);
     position: relative;
-
-    @include mobile{
-        height: 85vh;
-    }
 
     &__top{
         display: grid;
@@ -30,11 +26,15 @@
 
     &__title{
         color: inherit;
+        animation-name: fadeInLeft;
+        animation-duration: var(--animaation-duration);
     }
 
     &__contacts{
         display: grid;
         row-gap: rem(21);
+        animation-name: fadeInDown;
+        animation-duration: var(--animaation-duration);
     }
 
     &__phone{
@@ -56,6 +56,8 @@
         display: flex;
         align-items: center;
         column-gap: rem(20);
+        animation-name: fadeInUp;
+        animation-duration: var(--animaation-duration);
 
         @include tablet{
             flex-direction: column;
@@ -71,23 +73,46 @@
         backdrop-filter: blur(5px);
         background: rgba(24, 24, 24, 0.4);
         border-top: var(--border-light);
+        animation-name: fadeInUp;
+        animation-duration: var(--animaation-duration);
 
         @include tablet-above{
             grid-template-columns: repeat(4, 1fr);
         }
 
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
         &-item{
+            width: 100%;
+            border-top: var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include tablet-above{
+                justify-content: center;
+
+                &:not(:last-child){
+                    border-right: var(--border-light);
+                }
+            }
+        }
+
+        &-item-inner{
             display: flex;
             align-items: center;
             column-gap: rem(34);
             padding: fluid(41, 10);
 
-            &:not(:last-child){
-                border-right: var(--border-light);
-            }
-
-            @include tablet-above{
-                justify-content: center;
+            @include tablet{
+                width: 100%;
+                max-width: rem(300);
+                
             }
         }
 
