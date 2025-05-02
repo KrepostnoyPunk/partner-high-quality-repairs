@@ -1,0 +1,152 @@
+@use '../tools' as *;
+
+.guarantees{
+    display: grid;
+    row-gap: rem(33);
+
+    &__list,
+    &__bottom{
+        display: grid;
+        
+        @include tablet-above{
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: rem(40);
+        }
+
+        @include tablet{
+            grid-template-columns: 1fr;
+            row-gap: rem(72);
+        }
+    }
+
+    &__list{
+        counter-reset: custom-counter;
+    }
+
+    &__item{
+        counter-increment: custom-counter;
+        padding: rem(63) rem(29);
+        box-shadow: 0 rem(20) rem(40) 0 rgba(193, 193, 193, 0.3);
+        border-radius: rem(32);
+        display: grid;
+        row-gap: rem(16);
+        position: relative;
+
+        &::after{
+            content: "0" counter(custom-counter);
+            position: absolute;
+            bottom: rem(-43);
+            right: rem(23);
+            font-size: rem(90);
+            font-weight: 800;
+            color: var(--pale-gray);
+            opacity: .1;
+        }
+
+        &-title{
+            font-weight: 700;
+        }
+
+        &-description{
+            color: var(--light-color-alt);
+        }
+
+        &-list{
+            display: grid;
+
+            &-item{
+                white-space: nowrap;
+                display: inline-flex;
+                align-items: center;
+                column-gap: rem(8);
+                color: var(--light-color-alt);
+
+                &::before{
+                    content: url('/public/icons/list-mark-ellipse--gradient.svg');
+                }
+            }
+        }
+    }
+
+    &__bottom{
+        @include tablet-above{
+            grid-template-areas: 
+            "tile1 img ."
+            ". img tile2";
+            column-gap: rem(16);
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__tile{
+        grid-area: tile1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: rem(51) rem(76);
+        box-shadow: 0 rem(20) rem(40) 0 rgba(193, 193, 193, 0.3);
+        border-radius: rem(35);
+        max-height: rem(121);
+        position: relative;
+        font-size: rem(20);
+        width: 100%;
+        text-align: center;
+
+        &::before,
+        &::after{
+            @include square(#{rem(34)});
+
+            content: '';
+            position: absolute;
+            border-radius: 100%;
+            border: rem(8) solid #87ceeb;
+            border-image: var(--btn-gradient);
+            border-image-slice: 1;
+            box-shadow: 0 rem(6) rem(13) 0 rgba(229, 241, 255, 0.8);
+        }
+
+        &:first-child{
+            &::after{
+                right: rem(-17);
+
+                @include tablet{
+                    bottom: rem(-17);
+                    left: 50%;
+                    right: -50%;
+                }
+            }
+
+            &::before{
+                display: none;
+            }
+        }
+
+        &:last-child{
+            grid-area: tile2;
+
+            &::before{
+                left: rem(-17);
+
+                @include tablet{
+                    top: rem(-17);
+                    left: 50%;
+                    right: -50%;
+                }
+            }
+
+            &::after{
+                display: none;
+            }
+        }
+    }
+
+    &__img{
+        grid-area: img;
+    }
+}

@@ -1,0 +1,7 @@
+@use '../tools' as *;
+
+.presentation{
+    &__img{
+        max-height: fluid(596, 423);
+    }
+}

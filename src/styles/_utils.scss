@@ -7,6 +7,12 @@
     padding-inline: var(--container-padding-x);
 }
 
+.container-s{
+    max-width: calc(rem(1220) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
 // скрытие для CEO
 .visually-hidden{
     @include visually-hidden;

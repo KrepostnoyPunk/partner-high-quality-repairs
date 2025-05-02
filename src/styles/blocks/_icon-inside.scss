@@ -1,0 +1,45 @@
+@use '../tools' as *;
+
+.icon-inside{
+    &::before{
+        @include square(#{rem(80)});
+
+        content: '';
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: rem(1142);
+        border: rem(1.14) solid var(--light-color-alt);
+        background-color: var(--light-color);
+    }
+
+    &--guarantees{
+        &:first-child{
+            @include tablet{
+                margin-top: rem(40);
+            }
+        }
+
+        &::before{
+            content: url('/public/icons/guarantees-1.svg');
+            box-shadow: 0 rem(6) rem(13) 0 rgba(229, 241, 255, 0.8);
+
+            top: rem(-40);
+            
+            @include abs-x;
+        }
+
+        &:nth-child(2){
+            &::before{
+                content: url('/public/icons/guarantees-2.svg');
+            }
+        }
+
+        &:nth-child(3){
+            &::before{
+                content: url('/public/icons/guarantees-3.svg');
+            }
+        }
+    }
+}
