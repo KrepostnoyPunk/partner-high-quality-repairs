@@ -1,7 +1,25 @@
 @use '../tools' as *;
 
 .presentation{
+    &__slider{
+        &-track{
+            overflow: hidden;
+        }
+
+        &-list{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: rem(40);   
+        }
+    }
+
+    &__slide{
+        width: rem(1080);
+    }
+
     &__img{
-        max-height: fluid(596, 423);
+        width: rem(1080);
+        height: fluid(596, 423);
     }
 }

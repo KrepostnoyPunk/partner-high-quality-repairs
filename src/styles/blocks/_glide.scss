@@ -28,7 +28,8 @@
         column-gap: rem(40);
 
         &--wide{
-            justify-self: normal
+            justify-self: normal;
+            background-color: steelblue;
         }
     }
 
